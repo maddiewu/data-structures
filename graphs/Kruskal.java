@@ -1,11 +1,9 @@
 import java.util.*;
 
 /** A class that runs Kruskal's algorithm on a Graph. Given a graph G, Kruskal's
- *  algorithm constructs a new graph T such T is a spanning tree of G and the
+ *  algorithm constructs a new graph T such T is a minimum spanning tree of G (the
  *  sum of its edge weights is less than the sum of the edge weights for
- *  every possible spanning tree T* of G. This is called the Minimum Spanning
- *  Tree (MST).
- *
+ *  every possible spanning tree T* of G). 
  */
 public class Kruskal {
 
@@ -49,7 +47,6 @@ public class Kruskal {
 
     /** A naive implementation of BFS to check if two nodes are connected. */
     public static boolean isConnected(Graph g, int v1, int v2) {
-        // TODO implement!
         if (!g.containsVertex(v1) || !g.containsVertex(v2)) {
             return false;
         }
