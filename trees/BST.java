@@ -1,3 +1,5 @@
+/*Implementation of a binary search tree. */
+
 import java.util.*;
 
 public class BST {
@@ -9,6 +11,7 @@ public class BST {
         root = linkedListToTree(list.iterator(), list.size());
     }
 
+    /*Build a balanced binary search tree from a sorted linked list. */
     private BSTNode linkedListToTree (Iterator iter, int n) {
         if (!iter.hasNext()) {
             return null;
@@ -29,28 +32,6 @@ public class BST {
         root.right = rightChild;
         return root;
     }
-
-    /*Build a balanced binary search tree from a sorted linked list.
-    private BSTNode linkedListToTree (Iterator iter, int n) {
-        if (!iter.hasNext()) {
-            return null;
-        }
-        iterator = iter;
-        return linkedListToTree(0, n - 1);
-    }
-
-    private BSTNode linkedListToTree(int start, int end) {
-        if (start > end) {
-            return null;
-        }
-        int mid = (start + end) / 2;
-        BSTNode root = new BSTNode(iterator.next());
-        BSTNode leftC = linkedListToTree(start, mid - 1);
-        root.left = leftC;
-        BSTNode rightC= linkedListToTree(mid + 1, end);
-        root.right = rightC;
-        return root;
-    }*/
 
     /**
      * Prints the tree to the console.
