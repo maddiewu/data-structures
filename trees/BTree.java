@@ -1,5 +1,5 @@
 /**
- * Generic BTree class that exposes the root to the world.
+ * Generic BTree class.
  *
  * @param <T> Type of items to hold.
  */
@@ -22,7 +22,6 @@ public class BTree<T extends Comparable<T>> {
 
         /**
          * Returns the number of items in this node.
-         *
          * @return number of items.
          */
         int getItemCount();
