@@ -1,3 +1,5 @@
+/*AmoebaFamily is an implementation of a tree with N children. */
+
 import java.util.*;
 
 public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
@@ -21,7 +23,6 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 
 	// Makes all Amoeba names only lower case letters.
 	public void makeNamesLowercase() {
-		// Your goal is to make this as similar as possible to addChild
 		if (root != null) {
 			root.makeNamesLowercase();
 		}
@@ -30,7 +31,6 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 	// Replaces the name of an amoeba named currentName with the name newName.
 	// Precondition: the amoeba family contains an amoeba named currentName.
 	public void replaceName(String currentName, String newName) {
-		// Your goal is to make this as similar as possible to addChild
 		if (root != null) {
 			root.replaceName(currentName,newName);
 		}
@@ -39,7 +39,6 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 	// Print the names of all amoebas in the family.
 	// later you will write print() that has more interesting formatting
 	public void printFlat() {
-		// Your goal is to make this as similar as possible to addChild
 		if (root != null) {
 			root.printFlat();
 		}
@@ -52,7 +51,7 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 	// should be printed in the following sequence:
 	// Amos McCoy, mom/dad, me, Mike, Bart, Lisa, Homer, Marge,
 	// Bill, Hilary, Fred, Wilma, auntie
-    // This is the pretty print exercise.
+    	// This is the pretty print exercise.
 	public void print() {
 		if (root != null) {
 			root.print(0);
@@ -71,8 +70,6 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 	// instead of returning the length of the longest name, this method should
 	// return the name that is longest.
 	public String longestName() {
-		// your goal is to make this look as similar as possible to
-		// longestNameLength
 		if (root != null) {
 			return root.longestName();
 		}
@@ -130,7 +127,6 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 		// Complete enumeration of a family of N amoebas should take
 		// O(N) operations.
 
-		// You will supply the details of this class in a future lab.
 		ArrayList<Amoeba> fringe;
 
 		public AmoebaIterator() {
@@ -160,10 +156,7 @@ public class AmoebaFamily implements Iterable<AmoebaFamily.Amoeba>{
 		}
 
 		public void remove() {
-			// Not used for now -- removal from a tree can be difficult.
-			// Once you've learned about different ways to remove from
-			// trees, it might be a good exercise to come back and 
-			// try to implement this.
+			// Not used for now
 		}
 
 	} // end of AmoebaIterator nested class
