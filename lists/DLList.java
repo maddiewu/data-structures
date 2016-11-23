@@ -64,8 +64,6 @@ public class DLList {
         return s.toString();
     }
 
-    /* Fill these in! */
-
     /**
      * Insert a new node into the DLList.
      * @param o Object to insert
@@ -94,7 +92,6 @@ public class DLList {
      */
     public void insertFront(Object o) {
         insert(o, 0);
-        // fill me in
     }
 
     /**
@@ -143,7 +140,6 @@ public class DLList {
             insert(doubleList.item, i+1);
             doubleList=doubleList.next.next;
         }
-        // fill me in
     }
 
     /**
