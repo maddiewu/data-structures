@@ -1,3 +1,5 @@
+/*Implementation of Fibonacci sequence using a HashMap for memoization. */
+
 import java.util.HashMap;
 
 public class Fibonacci {
@@ -22,8 +24,6 @@ public class Fibonacci {
 				hashMem.put(n, fib(n - 1) + fib(n - 2));
 			}
 			return hashMem.get(n);
-			/*int returnValue = fib(n - 1) + fib(n - 2);
-			return returnValue;*/
 		}
 	}
 
