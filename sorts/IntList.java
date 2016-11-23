@@ -1,5 +1,6 @@
 /**
  * A doubly-linked list of integers supporting various sorting algorithms.
+ * Insertion sort, merge sort, quicksort, selection sort.
  */
 public class IntList {
 
@@ -244,27 +245,6 @@ public class IntList {
         listArray[i] = listArray[j];
         listArray[j] = temp;
     }
-
-    /*public int quicksort(IntList x) {
-        IntListNode low = x.head;
-        IntListNode high = x.tail;
-        IntListNode divider = head;
-        for (; high != null; high = high.prev) {
-            if (high != divider) {
-                for (; low != null; low = low.next) {
-                    if (low != divider) {
-                        if (low.item > high.item) {
-                            int temp = low.item;
-                            low.item = high.item;
-                            high.item = temp;
-                        }
-                    }
-                }
-            }
-        }
-        head = head.next;
-        return divider.item;
-    }*/
 
     /**
      * Returns the result of sorting the values in this list using the merge
