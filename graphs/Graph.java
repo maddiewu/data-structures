@@ -1,14 +1,16 @@
 /**
  * Created by madelinewu on 7/31/16.
+ * Implementation of a graph that uses Dijkstra's Algorithm (can find the shortest path between two vertices),
+ * can determine if a path exists between two given vertices, determine the distance between two edges, 
+ * can topologically sort, and can iterate through the graph using depth first search.
  */
-import jh61b.junit.In;
 
 import java.util.*;
 import java.util.HashMap;
 
 public class Graph implements Iterable<Integer>{
 
-    private LinkedList<Edge>[] adjLists;
+    private LinkedList<Edge>[] adjLists; //linked list of adjacent edges
     private int vertexCount;
     private int startVertex;
 
@@ -30,7 +32,6 @@ public class Graph implements Iterable<Integer>{
             throw new IllegalArgumentException("Cannot set iteration start vertex to " + v + ".");
         }
     }
-
 
     // Add to the graph a directed edge from vertex v1 to vertex v2.
     public void addEdge(int v1, int v2) {
@@ -275,7 +276,7 @@ public class Graph implements Iterable<Integer>{
 
     }
 
-    /*Shortest path. */
+    /*Shortest path (DIKKSTRA'S ALGORITHM). */
     public ArrayList<Integer> shortestPath(int startVertex, int endVertex) {
         ArrayList<Integer> finalPath = new ArrayList<>();
         ArrayList<Integer> vertices = visitAll(startVertex);
