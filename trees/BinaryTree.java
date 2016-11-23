@@ -1,3 +1,9 @@
+/*This class is an implementation of a binary tree.
+* The tree can be printed in preorder, postorder, and inorder.
+* The tree can represent the recursive Fibonaccic call sequence, 
+* The tree can represent a given arithmetic expression and simplify it as much as possible. 
+*/
+
 import java.util.ArrayList;
 import java.util.jar.Pack200;
 
@@ -83,6 +89,7 @@ public class BinaryTree {
         isOK(t.right);
     }
 
+    /*Tree to represent the recurvise call structure of the Fibonacci sequence. */
     public static BinaryTree fibTree(int n) {
         BinaryTree result = new BinaryTree();
         if (n==0) {
@@ -148,6 +155,7 @@ public class BinaryTree {
         }
     }
 
+    /*Optimizes an algebraic expression that is represented by the tree. */
     public void optimize(TreeNode n) {
         String start = n.item.toString();
 
