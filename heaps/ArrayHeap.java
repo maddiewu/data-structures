@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-/** A Generic heap class. Unlike Java's priority queue, this heap doesn't just
-  * store Comparable objects. Instead, it can store any type of object
-  * (represented by type T) and an associated priority value.*/
+/** A Generic heap class .*/
 public class ArrayHeap<T> {
 
 	/* An ArrayList that stores the nodes in this binary heap. */
